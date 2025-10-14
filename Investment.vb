@@ -36,12 +36,17 @@ Public Property PurchaseDate As Date
     End Function
 
     Public Shared Function GetCurrentPrice(ticker As String) As Double
-    If prices.Contains(ticker) Then
+        If prices.Contains(ticker) Then
             Return CType(prices.Item(ticker), PriceType).Price
         Else
-        Return -1.0
-    End If
-End Function
+            Return -1.0
+        End If
+    End Function
+
+    Public Shared Sub Insert(inv As Investment)
+        Dim rowToInsert As Integer = investAdpter.Insert(inv.Ticker, CShort(inv.Type), CDec(inv.PricePerShare),
+                                                         inv.PurchaseDate, CShort(inv.NumOfShares))
+    End Sub
 
 End Class
 

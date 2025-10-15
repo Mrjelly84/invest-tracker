@@ -22,22 +22,28 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblPricePerShare = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.txtShares = New System.Windows.Forms.TextBox()
+        Me.txtTicker = New System.Windows.Forms.TextBox()
+        Me.dtpPurchDate = New System.Windows.Forms.DateTimePicker()
+        Me.coboInvestmentType = New System.Windows.Forms.ComboBox()
         Me.btnShow = New System.Windows.Forms.Button()
         Me.btnConfirm = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.InvestTrackDataSet = New Investment_tracker.InvestTrackDataSet()
+        Me.InvestmentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InvestmentsTableAdapter = New Investment_tracker.InvestTrackDataSetTableAdapters.InvestmentsTableAdapter()
+        CType(Me.InvestTrackDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InvestmentsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -95,14 +101,14 @@ Partial Class Form1
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Price per share"
         '
-        'Label7
+        'lblPricePerShare
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(377, 109)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(28, 13)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "0.00"
+        Me.lblPricePerShare.AutoSize = True
+        Me.lblPricePerShare.Location = New System.Drawing.Point(377, 109)
+        Me.lblPricePerShare.Name = "lblPricePerShare"
+        Me.lblPricePerShare.Size = New System.Drawing.Size(28, 13)
+        Me.lblPricePerShare.TabIndex = 6
+        Me.lblPricePerShare.Text = "0.00"
         '
         'Label8
         '
@@ -113,44 +119,44 @@ Partial Class Form1
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "Total amount:"
         '
-        'Label9
+        'lblTotal
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(377, 208)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(28, 13)
-        Me.Label9.TabIndex = 8
-        Me.Label9.Text = "0.00"
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Location = New System.Drawing.Point(377, 208)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(28, 13)
+        Me.lblTotal.TabIndex = 8
+        Me.lblTotal.Text = "0.00"
         '
-        'TextBox1
+        'txtShares
         '
-        Me.TextBox1.Location = New System.Drawing.Point(115, 208)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 9
+        Me.txtShares.Location = New System.Drawing.Point(115, 208)
+        Me.txtShares.Name = "txtShares"
+        Me.txtShares.Size = New System.Drawing.Size(100, 20)
+        Me.txtShares.TabIndex = 9
         '
-        'TextBox2
+        'txtTicker
         '
-        Me.TextBox2.Location = New System.Drawing.Point(105, 109)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 10
+        Me.txtTicker.Location = New System.Drawing.Point(105, 109)
+        Me.txtTicker.Name = "txtTicker"
+        Me.txtTicker.Size = New System.Drawing.Size(100, 20)
+        Me.txtTicker.TabIndex = 10
         '
-        'DateTimePicker1
+        'dtpPurchDate
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(115, 157)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
-        Me.DateTimePicker1.TabIndex = 11
+        Me.dtpPurchDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpPurchDate.Location = New System.Drawing.Point(115, 157)
+        Me.dtpPurchDate.Name = "dtpPurchDate"
+        Me.dtpPurchDate.Size = New System.Drawing.Size(100, 20)
+        Me.dtpPurchDate.TabIndex = 11
         '
-        'ComboBox1
+        'coboInvestmentType
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(115, 60)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(163, 21)
-        Me.ComboBox1.TabIndex = 12
+        Me.coboInvestmentType.FormattingEnabled = True
+        Me.coboInvestmentType.Location = New System.Drawing.Point(115, 60)
+        Me.coboInvestmentType.Name = "coboInvestmentType"
+        Me.coboInvestmentType.Size = New System.Drawing.Size(163, 21)
+        Me.coboInvestmentType.TabIndex = 12
         '
         'btnShow
         '
@@ -179,6 +185,20 @@ Partial Class Form1
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
+        'InvestTrackDataSet
+        '
+        Me.InvestTrackDataSet.DataSetName = "InvestTrackDataSet"
+        Me.InvestTrackDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'InvestmentsBindingSource
+        '
+        Me.InvestmentsBindingSource.DataMember = "Investments"
+        Me.InvestmentsBindingSource.DataSource = Me.InvestTrackDataSet
+        '
+        'InvestmentsTableAdapter
+        '
+        Me.InvestmentsTableAdapter.ClearBeforeFill = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -187,13 +207,13 @@ Partial Class Form1
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnConfirm)
         Me.Controls.Add(Me.btnShow)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.coboInvestmentType)
+        Me.Controls.Add(Me.dtpPurchDate)
+        Me.Controls.Add(Me.txtTicker)
+        Me.Controls.Add(Me.txtShares)
+        Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.lblPricePerShare)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -202,6 +222,8 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
         Me.Text = "Investment Tracking"
+        CType(Me.InvestTrackDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InvestmentsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -213,14 +235,17 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblPricePerShare As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents lblTotal As Label
+    Friend WithEvents txtShares As TextBox
+    Friend WithEvents txtTicker As TextBox
+    Friend WithEvents dtpPurchDate As DateTimePicker
+    Friend WithEvents coboInvestmentType As ComboBox
     Friend WithEvents btnShow As Button
     Friend WithEvents btnConfirm As Button
     Friend WithEvents btnClose As Button
+    Friend WithEvents InvestTrackDataSet As InvestTrackDataSet
+    Friend WithEvents InvestmentsBindingSource As BindingSource
+    Friend WithEvents InvestmentsTableAdapter As InvestTrackDataSetTableAdapters.InvestmentsTableAdapter
 End Class

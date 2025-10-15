@@ -161,6 +161,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="InvestPrices.txt" />
     <Content Include="InvestTrack.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

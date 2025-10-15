@@ -58,7 +58,7 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InvestTrack.m"& _ 
-            "df;Integrated Security=True;Connect Timeout=30;Encrypt=True")>  _
+            "df;Integrated Security=True;Connect Timeout=30;Encrypt=False")>  _
         Public ReadOnly Property InvestTrackConnectionString() As String
             Get
                 Return CType(Me("InvestTrackConnectionString"),String)

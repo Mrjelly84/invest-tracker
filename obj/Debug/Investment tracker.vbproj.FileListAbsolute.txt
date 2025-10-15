@@ -1,0 +1,16 @@
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\bin\Debug\InvestTrack.mdf
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\bin\Debug\InvestTrack_log.ldf
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\bin\Debug\Investment tracker.exe.config
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\bin\Debug\Investment tracker.exe
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\bin\Debug\Investment tracker.pdb
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\bin\Debug\Investment tracker.xml
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\obj\Debug\Investment tracker.vbproj.AssemblyReference.cache
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\obj\Debug\Investment_tracker.Form1.resources
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\obj\Debug\Investment_tracker.Form2.resources
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\obj\Debug\Investment_tracker.Resources.resources
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\obj\Debug\Investment tracker.vbproj.GenerateResource.cache
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\obj\Debug\Investment tracker.vbproj.CoreCompileInputs.cache
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\obj\Debug\Investment tracker.exe
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\obj\Debug\Investment tracker.xml
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\obj\Debug\Investment tracker.pdb
+C:\Users\williamd\OneDrive - Affordable Window Systems\Documents\vb dot net\intermediate\Investment tracker\obj\Debug\Investment tracker.exe.config

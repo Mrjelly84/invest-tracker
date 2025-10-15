@@ -27,13 +27,13 @@ Public Property PurchaseDate As Date
             Return PricePerShare * NumOfShares
         End Get
     End Property
-    Public Shared Function LoadPrices(filename As String) As Boolean
+    Public Shared Sub LoadPrices()
         Dim table As InvestTrackDataSet.PricesDataTable = priceAdpter.GetData()
         For Each row As DataRow In table
             prices.Add(row("Price"), row("Ticker").ToString())
         Next
 
-    End Function
+    End Sub
 
     Public Shared Function GetCurrentPrice(ticker As String) As Double
         If prices.Contains(ticker) Then
